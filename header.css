@@ -1,0 +1,41 @@
+body {
+	font-family: arial;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ul li {
+	width: 200px;
+	height: 40px;
+	float: left;
+	background-color: black;
+	text-align: center;
+	line-height: 40px;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 0;
+}
+ul li a{
+	text-decoration: none;
+	color: white;
+	display: block;
+}
+
+ul li a:hover {
+	background-color: green;
+}
+
+.hh {
+	background-color: red;
+}
+
+/* first step hidden sub-menu */
+ul li ul li {
+	display: none;
+}
+/* second step show sub-menu */
+ul li:hover ul li {
+	display: block;
+}
