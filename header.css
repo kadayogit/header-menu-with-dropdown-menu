@@ -1,41 +1,109 @@
-body {
-	font-family: arial;
-}
+
 ul {
 	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+ li {
+ 	float: left;
+ 	width: 180px;
+ 	background-color: black;
+ 	height: 30px;
+ 	text-align: center;
+ 	line-height: 30px;
+ 	font-weight: bold;
+ 	font-size: 12px;
+ }
+
+ ul li a{
+ 	text-decoration: none;
+ 	color: white;
+ 	display: block;
+ }
+ ul li a:hover {
+       background-color: green;
+ }
+ #home {
+ 	background-color: red;
+ }
+ /* Step 1: hidden sub-menu */
+ ul li ul li {
+ 	display: none;
+ }
+ /* Step 2: show sub-menu */
+ ul li:hover ul li {
+ 	display: block;
+ }
+/* grid system css */
+
+body {
 	margin: 0;
 	padding: 0;
+	font-family: sans-serif;
 }
-ul li {
-	width: 200px;
-	height: 40px;
-	float: left;
-	background-color: black;
-	text-align: center;
-	line-height: 40px;
+.container {
+	background-color: ;
+	width: 900px;
+	margin: 50px auto 0;
+	display: table;
+	box-sizing: border-box;
+	margin-top: 0;
+}
+.row {
+	margin: 0;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.column {
+	background: #f32525;
+	display: table-cell;
+	padding: 20px;
+	color: white;
 	font-size: 18px;
 	font-weight: bold;
-	padding: 0;
+	text-align: left;
+	border-left: 4px solid #fff;
+	border-right: 4px solid #fff;
+
 }
-ul li a{
-	text-decoration: none;
+button {
+	width: 100%;
+	height: 30px;
 	color: white;
-	display: block;
-}
-
-ul li a:hover {
 	background-color: green;
+	font-size: 18px;
+	border: none;
+}
+.row:nth-child(1) .column:nth-child(1) {
+	background-color: #EC407A;
+}
+.row:nth-child(1) .column:nth-child(2) {
+	background-color: #7CB342;
+	color: black;
+}
+.row:nth-child(1) .column:nth-child(3) {
+	background-color: #0288D1;
+}
+.row:nth-child(2) .column:nth-child(1) {
+	background-color: #7CB342;
+}
+.row:nth-child(2) .column:nth-child(2) {
+	background-color: #0288D1;
 }
 
-.hh {
-	background-color: red;
-}
-
-/* first step hidden sub-menu */
-ul li ul li {
-	display: none;
-}
-/* second step show sub-menu */
-ul li:hover ul li {
-	display: block;
+@media (max-width: 900px) {
+	.container{
+	  margin: 0;
+	  padding: 0;
+	  width: 100%;
+	}
+	.row {
+		margin: 0;
+	}
+	.column {
+		width: 100%;
+		display: block;
+		margin: 10px 0;
+		box-sizing: border-box;
+	}
 }
